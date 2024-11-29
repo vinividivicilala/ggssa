@@ -1,0 +1,92 @@
+.markdown>* {
+  all: revert;
+}
+
+.markdown li {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.markdown p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.markdown a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.markdown h1 {
+  font-size: 32px;
+}
+
+.markdown h2 {
+  font-size: 27px;
+}
+
+.markdown h3 {
+  font-size: 23px;
+}
+
+.markdown h4 {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .markdown p {
+    font-size: 16px;
+    /* Adjust font size for paragraphs */
+  }
+
+  .markdown h1 {
+    font-size: 28px;
+    /* Adjust font size for h1 */
+  }
+
+  .markdown h2 {
+    font-size: 24px;
+    /* Adjust font size for h2 */
+  }
+
+  .markdown h3 {
+    font-size: 20px;
+    /* Adjust font size for h3 */
+  }
+
+  .markdown h4 {
+    font-size: 18px;
+    /* Adjust font size for h4 */
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
